@@ -3,28 +3,6 @@
 General purpose monorepo architecture service to connect to store
 and share data with other services
 
-## Development
-
-### Install registry
-
-If you don't already have a GitLab personal token,
-
-- Navigate to
-  [User Settings > Personal Access Tokens](https://gitlab.com/profile/personal_access_tokens)
-- Generate a new Personal Access Token with no expiry and only the `read_api`
-  scope.
-
-Once you have the token:
-
-    $ npm login --registry="https://gitlab.com/api/v4/packages/npm/"
-
-- For the username, type your Falabella username.
-- For the password, paste the access token.
-
-Then set up the registry:
-
-    $ npm config set @falabella-gitlab:registry=https://gitlab.com/api/v4/packages/npm/
-
 # Prerequesites:
 
 - Lerna is required to run the below commands.
@@ -69,7 +47,7 @@ Refer to .env.example file for configuring the env variables.
 Before running the application run db migrations to create
 tables.
 
-    $ cd apps/store-service
+    $ cd apps/service
 
     $ yarn db-init
 
@@ -80,8 +58,8 @@ you can use any of this. As well you may run other side card
 executables for different purposes but usefull.
 
 Run these commands from the application folder
-  
- \$ cd apps/store-service
+
+\$ cd apps/service
 
 For development enviroments you may use
 
@@ -94,10 +72,6 @@ General production start you may use
 To run lint fixing you may use
 
     $ yarn lint
-
-### API Docs
-
-API documentation is hosted at [`http://localhost:8888/documentation`](http://127.0.0.1:8888/documentation/index.html)
 
 ### Testing
 
