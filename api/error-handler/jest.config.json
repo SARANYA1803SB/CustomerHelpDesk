@@ -1,0 +1,22 @@
+{
+    "testRegex": "((\\.|/*.)(test))\\.js?$",
+    "testPathIgnorePatterns": [
+    "/node_modules/"
+    ],
+    "collectCoverageFrom": [
+    "src/**/*.js"
+    ],
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+    "/test/",
+    "/node_modules/"
+    ],
+    "moduleFileExtensions": [
+    "ts",
+    "js",
+    "json"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": ["json", "lcov"],
+    "reporters" : ["../../jest-custom-reporter.js"]
+    }
